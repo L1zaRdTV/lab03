@@ -1,0 +1,213 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:columnCount="2"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Мой журнал настроения"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal" />
+
+    <!-- Блок статистики -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_columnSpan="2"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:background="#E0E0E0"
+        android:layout_gravity="fill_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📊 Сегодняшняя статистика"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!-- Записей -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="5"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Записей"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Настроение -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="4.2"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#2196F3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Настроение"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Активность -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="87%"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF9800"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Активность"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Зеленая линия -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_columnSpan="2"
+        android:background="#4CAF50"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="fill_horizontal"/>
+
+    <!-- Кнопка Новая запись -->
+    <Button
+        android:id="@+id/newEntryButton"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:text="Новая запись"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:backgroundTint="#4CAF50"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill" />
+
+    <!-- Кнопка История -->
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:text="История"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:backgroundTint="#2196F3"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill" />
+
+    <!-- Кнопка Статистика -->
+    <Button
+        android:id="@+id/statsButton"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:text="Статистика"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:backgroundTint="#FF9800"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill" />
+
+    <!-- Кнопка Настройки -->
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:text="Настройки"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:backgroundTint="#9C27B0"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill" />
+
+    <!-- Информационная панель -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#E5E5E5"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сегодня:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Записей сегодня: 0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Среднее настроение: -"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</GridLayout>
